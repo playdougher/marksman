@@ -30,15 +30,15 @@ jobs:
       - name: Install dependencies
         run: dotnet restore
 
-      - name: test step
-        run: dotnet tool restore
+      #- name: test step
+        #run: dotnet tool restore
 
       - name: Build
         run: dotnet build
 
       - name: Check format and lints
-        #run: make check
-        run: echo "Skipping lint check to allow 4-space indentation"
+        run: make check
+        #run: echo "Skipping lint check to allow 4-space indentation"
         if: ${{ matrix.os == 'ubuntu-latest' }}
 
       - name: Test with the dotnet CLI
