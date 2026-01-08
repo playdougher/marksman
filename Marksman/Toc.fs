@@ -31,7 +31,7 @@ module Entry =
     }
 
     let renderLink entry minLevel =
-        let offset = String.replicate (entry.level - minLevel) "  "
+        let offset = String.replicate (entry.level - minLevel) "    "
         let slug = entry.link |> Slug.toString
         $"{offset}- [{entry.title}](#{slug})"
 
