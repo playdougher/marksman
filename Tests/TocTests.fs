@@ -155,10 +155,10 @@ module RenderToc =
         let expectedLines = [|
             StartMarker
             "- [T1](#t1)"
-            "  - [T2](#t2)"
-            "    - [T3](#t3)"
-            "  - [T4](#t4)"
-            "    - [T5](#t5)"
+            "    - [T2](#t2)"
+            "        - [T3](#t3)"
+            "    - [T4](#t4)"
+            "        - [T5](#t5)"
             EndMarker
         |]
 
@@ -199,9 +199,9 @@ module DocumentEdit =
                 |
                 |{StartMarker}
                 |- [T1](#t1)
-                |  - [T2](#t2)
+                |    - [T2](#t2)
                 |- [T3](#t3)
-                |    - [T4](#t4)
+                |        - [T4](#t4)
                 |{EndMarker}
                 |
                 |## T1 
@@ -237,9 +237,9 @@ module DocumentEdit =
                 |
                 |{StartMarker}
                 |- [T1](#t1)
-                |    - [T2](#t2)
-                |  - [T3](#t3)
-                |      - [T4](#t4)
+                |        - [T2](#t2)
+                |    - [T3](#t3)
+                |            - [T4](#t4)
                 |{EndMarker}
                 |
                 |### T2 
@@ -275,9 +275,9 @@ module DocumentEdit =
                 $"
                 |{StartMarker}
                 |- [T1](#t1)
-                |  - [T2](#t2)
+                |    - [T2](#t2)
                 |- [T3](#t3)
-                |    - [T4](#t4)
+                |        - [T4](#t4)
                 |{EndMarker}
                 |
                 |## T1 
